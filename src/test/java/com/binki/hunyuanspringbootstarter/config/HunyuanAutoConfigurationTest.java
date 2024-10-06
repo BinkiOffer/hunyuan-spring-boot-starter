@@ -12,11 +12,14 @@ import static org.springframework.test.util.AssertionErrors.assertNotNull;
  * @description:
  * @Date 2024/10/6
  */
-@SpringBootTest(classes = HunyuanAutoConfig.class)
-public class HunyuanAutoConfigTest {
+@SpringBootTest(classes = HunyuanAutoConfiguration.class)
+public class HunyuanAutoConfigurationTest {
 
-    @Resource
     private HunyuanClient client;
+
+    public HunyuanAutoConfigurationTest(HunyuanClient client) {
+        this.client = client;
+    }
 
     @Test
     public void testHunyuanAutoConfigured() {
