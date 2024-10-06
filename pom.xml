@@ -5,7 +5,7 @@
 
     <groupId>com.binki</groupId>
     <artifactId>hunyuan-spring-boot-starter</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
 
     <name>hunyuan-spring-boot-starter</name>
     <description>hunyuan-spring-boot-starter</description>
@@ -24,6 +24,13 @@
             <groupId>com.tencentcloudapi</groupId>
             <artifactId>tencentcloud-sdk-java-hunyuan</artifactId>
             <version>3.1.1110</version>
+            <!-- 消除提示：Standard Commons Logging discovery in action with spring-jcl -->
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- 自动配置所需依赖 -->
